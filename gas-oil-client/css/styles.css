@@ -1,0 +1,53 @@
+/*
+	styles.css
+*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+/* ============= STRUCTURE =============== */
+body{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dcdcdc+0,939393+100 */
+	background: #dcdcdc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #dcdcdc 0%, #939393 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #dcdcdc 0%,#939393 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #dcdcdc 0%,#939393 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdcdc', endColorstr='#939393',GradientType=0 ); /* IE6-9 */
+	height: 100vh;
+	width: 100vw;
+}
+header {
+	padding: 0;
+	margin: 0;
+}
+#side-slider-menu-container{
+	width: 100%;
+	height: 500px;
+	overflow-y: scroll;
+}
+.side-slider-menu-item{
+	text-align: center;
+}
+
+
+
+
+/* ============= TYPOGRAPHY =============== */
+
+
+
+
+/* ============= TABLES =============== */
+td {
+}
+
+th{
+	text-align: center;
+}
+
+
+
+
+/* END OF FILE */

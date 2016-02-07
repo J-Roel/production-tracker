@@ -1,0 +1,27 @@
+<!--  PANELS TO DISPLAY DIFFERENT TEAS -->
+<section class="container panel-info">
+	<div class="col-md-10 col-md-offset-1">
+		<div ng-repeat="book in BC.booklist track by $index">
+			<a href="/#/{{ book.id }}">
+			<div class="panel panel-tea">
+				<div class="row">
+				<div class="col-md-2">
+					<img src="{{book.imageUrl}}"/>
+				</div>
+				<div class="col-md-4">
+					<h4>{{book.bookName}}</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>{{book.author}}</h4>
+				</div>
+			</a>
+				<div class="col-md-2">
+					<button class="btn btn-warning" ng-click="BC.deleteBook('delete',book.id)"> Delete </button>
+				</div>
+				
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>

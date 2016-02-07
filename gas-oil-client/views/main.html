@@ -1,0 +1,84 @@
+
+<!--  PANELS TO DISPLAY DIFFERENT TEAS -->
+<section>
+<div class="col-md-2">
+	<div id="side-slider-menu-container">
+		<div ng-repeat="well in M.wellList">
+				<div class="panel panel-primary side-slider-menu-item"
+				ng-click="M.getWellProduction('wellProduction', well.id, well.leaseName);">
+					<h4>{{ well.leaseName }}</h4>
+				</div>
+		</div>
+	</div>
+	<a href="#/wells/"><div class="panel panel-primary side-slider-menu-item no-anchor"><h4>Edit Wells</h4></div></a>
+</div>
+
+
+
+<div class="col-md-10">
+<div class="panel panel-info">
+<h4 class="side-slider-menu-item">{{ M.curWellName }}</h4>
+	<table class="table">
+		<thead>
+			<th style="text-align: left;">Date</th>
+			<th>Static</th>
+			<th >Diff</th>
+			<th>MCF</th>
+			<th>TP</th>
+			<th>CP</th>
+			<th>Hauls</th>
+			<th>BBLs</th>
+			<th>Inches</th>
+			<th>SPM</th>
+			<th>Cycle</th>
+			<th>Hours On</th>
+			<th style="text-align: left;">Remarks</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="entry in M.wellProduction">
+			<td style="width: 10%;">
+				{{entry.date | date : shortDate : 'UTC' }}
+			</td>
+			<td style="width: 7%; text-align: center;">
+				{{entry.staticPsi}}
+			</td>
+			<td style="width: 7%; text-align: center;">
+				{{entry.diff}}
+			</td>
+			<td style="width: 7%; text-align: center;">
+				{{entry.mcf}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.tubingpsi}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.casingpsi}}
+			</td>
+			<td style="width: 10%; text-align: center;">
+				{{entry.hauls}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.bbls}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.inches}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.spm}}
+			</td>
+			<td style="width: 5%; text-align: center;">
+				{{entry.cycle}}
+			</td>
+			<td style="width: 10%; text-align: center;">
+				{{entry.hours_on}}
+			</td>
+			<td style="width: 30%;">
+				{{entry.remarks}}
+			</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>
+
+</section>
